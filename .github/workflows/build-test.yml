@@ -27,10 +27,8 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Go to app dir
-      run: cd app
     - name: Build with Maven
-      run: mvn clean package -DskipTests
+      run: cd app | mvn clean package -DskipTests
     
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
